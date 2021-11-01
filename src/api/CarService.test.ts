@@ -1,5 +1,4 @@
 import CarService from "./CarService";
-// import { validVinArr, vinValue } from "../mockData/mockData";
 import mockData from '../mockData/mockData'
 import axios from "axios";
 
