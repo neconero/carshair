@@ -8,6 +8,7 @@ router.get("/api/:make/:year", async (req: Request, res: Response) => {
     req.params.make,
     req.params.year
   );
+
   res.send(result);
 });
 

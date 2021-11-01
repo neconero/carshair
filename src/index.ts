@@ -21,3 +21,5 @@ app.use(errorHandler)
 app.listen(8080, () => {
   console.log("Server successfully started on 8080!");
 });
+
+export { app }

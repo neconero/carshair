@@ -33,8 +33,8 @@ class CarService {
       );
     } catch (err) {
       console.error(err);
+      throw new Error(`Something went wrong ${err}`);
     }
-    return [];
   };
 
   public static getVehicleByVin = async (vin: string): Promise<VehicleInfo> => {
