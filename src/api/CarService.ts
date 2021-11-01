@@ -41,7 +41,6 @@ class CarService {
     try {
       const url = `https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/${vin}?format=json`;
       let [data] = (await axios.get(url))?.data?.Results;
-      console.log(data);
 
       return {
         Make: data?.Make ?? null,
@@ -50,8 +49,8 @@ class CarService {
       };
     } catch (err) {
       console.error(err);
+      throw new Error(`Something went wrong ${err}`);
     }
-    return <VehicleInfo>{};
   };
 }
 
